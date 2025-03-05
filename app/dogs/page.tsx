@@ -295,6 +295,7 @@ export default function DogsPage() {
                   totalPages={totalPages}
                   hasPreviousPage={!!prevCursor}
                   hasNextPage={!!nextCursor}
+                  onPageChange={handlePageChange}
                   disabled={loading}
                 />
               </Box>
