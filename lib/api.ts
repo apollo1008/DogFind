@@ -76,7 +76,7 @@ export const searchDogsFromBreeds = async (params: {
     searchParams.append("ageMin", params.ageMin.toString());
   if (params.ageMax !== undefined)
     searchParams.append("ageMax", params.ageMax.toString());
-  if (params.from) searchParams.append("from", params.from);
+  if (params.from) searchParams.append("from", params.from.toString());
 
   const response = await fetch(
     `${API_BASE_URL}/dogs/search?${searchParams.toString()}`,
